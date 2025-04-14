@@ -44,7 +44,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE  &lt 3 ENTER     &lt 2 TAB  &kp BSPC
+                                            &kp SPACE  &lt 3 TAB     &lt 2 ENTER  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -61,7 +61,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE  &lt 3 ENTER     &lt 2 TAB  &kp BSPC
+                                            &kp SPACE  &lt 3 TAB     &lt 2 ENTER  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -78,7 +78,7 @@
         //│ CAPS     │ ESC      │ MENU     │ INS      │ DEL      │   │ [        │ ]        │  \       │ -        │ =        │
            &caps_word  &kp ESC   &kp K_APP   &kp INS    &kp DEL        &kp LBKT   &kp RBKT    &kp BSLH   &kp MINUS  &kp EQUAL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans        &trans     &trans
+                                            &kp ENTER  &trans        &trans     &kp DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -95,7 +95,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none  &kp C_BRI_DEC &kp LC(LG(Q)) &kp C_BRI_INC &none        &kp F11    &kp F12    &kp F13    &kp F14    &kp F15
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                            &kp ENTER   &trans         &trans     &kp DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
