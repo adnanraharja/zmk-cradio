@@ -20,6 +20,13 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        td: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     conditional_layers {
@@ -70,13 +77,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  1       │  2       │  3       │  4       │  5       │   │  6       │  7       │  8       │  9       │  0       │
-            &kp N1    &kp N2     &kp N3     &kp N4     &kp N5         &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
+           &td N1 EXCL &td N2 AT &td N3 HASH &td N4 DLLR &td N5 PRCNT &td N6 CARET &td N7 AMPS &td N8 STAR &td N9 LPAR &td N0 RPAR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ESC      │ HOME     │ PAGE DN  │ PAGE UP  │ END      │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  CAPS    │
            &kp ESC    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &caps_word
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ `        │ \        │ MENU     │ INS      │ DEL      │   │ [        │ ]        │  -       │  =       │  ' "     │
-           &kp GRAVE  &kp BSLH   &kp K_APP   &kp INS    &kp DEL        &kp LBKT   &kp RBKT    &kp MINUS  &kp EQUAL  &kp SQT
+         &td GRAVE TILDE &td BSLH PIPE &kp K_APP &kp INS &kp DEL    &td LBKT LBRC &td RBKT RBRC &td MINUS UNDER &td EQUAL PLUS &td SQT DQT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp ENTER  &trans        &trans     &kp DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -110,7 +117,7 @@
           &bootloader  &none     &none     &kp Z    &bt BT_SEL 1    &none     &none     &none     &none    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &none     &tog 1     &none    &bt BT_CLR &bt BT_SEL 2    &none     &none     &none     &none     &none
+            &tog 1     &none      &none     &bt BT_CLR &bt BT_SEL 2     &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
