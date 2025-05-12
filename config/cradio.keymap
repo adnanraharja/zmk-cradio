@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LSHFT k3  &ht LCTRL k4
+#define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RSHFT k2  &ht RALT k3  &ht RGUI k4
 
 / {
     behaviors {
@@ -220,7 +220,7 @@
             &td1       &td2       &td3       &td4       &td5           &td6       &td7       &td8       &td9       &td0 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ESC      │ HOME     │ PAGE DN  │ PAGE UP  │ END      │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  CAPS    │
-           &kp ESC    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &caps_word
+           &kp HOME   &kp PG_UP  &kp PG_DN  &kp END    &kp ESC        &caps_word &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ `        │ \        │ MENU     │ INS      │ DEL      │   │ [        │ ]        │  -       │  =       │  ' "     │
             &tdgrave   &tdbslh    &kp K_APP  &kp INS    &kp DEL        &tdlbkt    &tdrbkt    &tdminus   &tdequal   &tdsqt
